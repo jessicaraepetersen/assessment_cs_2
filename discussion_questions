@@ -1,0 +1,153 @@
+RECURSION
+
+1. In your own words, what is Recursion?
+
+Recursion is when a thing is defined in terms of itself, such as a circular 
+definition, in which you define a word by using the word itself. Recursion, for 
+our purposes in computer science, occurs when one of the steps of the procedure 
+(a function) involves using the procedure itself (calling the function within 
+itself). Recursion can be best detected in situations where the solution to a 
+problem depends on solutions to smaller instances of the same problem.
+
+2.  Why is it necessary to have a Base Case?
+
+Based on the definition of recursion above, logically speaking, recursion could
+be infinite. A base case, however, provides a way to terminate the potentially
+infinite recursion because the base case does not use recursion or a circular
+procedure to produce an answer or end result. 
+
+
+GRAPHS
+
+1. What is a Graph?
+
+Graphs consist of vertices or nodes (basic units) and edges, which look like
+lines (undirected) or arrows pointing (directed edges) from one vertex to another, 
+visualizing the relationship between the two vertices. Two nodes are considered 
+"adjacent" if they share an edge. 
+
+Graphs can be directed or undirected. In other words, the relationship between a 
+pair of vertices can be undirected, meaning there is no particular order between
+the two vertices. An unordered relationship between two vertices is symbolized by
+a straight line, also called an edge. In a directed graph, the relationships 
+between the vertices have an order, and the order is symbolized with arrows,
+in which the vertex that comes first points (with an arrow or also known as a
+directed edge) to the vertex that comes next.
+
+Graphs can be cyclic or acyclic. In other words, graphs can contain loops (cyclic)
+or graphs can be formed in such a way that in starting at x node and following
+the edges, it is not possible to get back to node x (acyclic).
+
+Edges can have a weight, which is like a label, containing data that 
+describes the relationship between two adjacent nodes. 
+
+
+2. How is a Graph different from a Tree?
+
+A tree is a type of graph. In this way, all trees are graphs, but not all graphs 
+are trees. Graphs can be directed (ordered) or undirected (unordered) as well as cyclic or 
+acyclic. Trees are directed, acyclic graphs.
+
+
+3. Give an example of somthing that would be good to model with a Graph.
+
+A network and the relationships therein would be an example of something that 
+would be good to model with a graph.
+
+
+PERFORMANCE OF DIFFERENT DATA STRUCTURES
+
+
+Fill in the runtimes for the following actions for the table below:
+
+Data Structure              Index       Search      Add-R       Add-L       Pop-L       Pop-R
+Python List (Array)         O(1)        O(n)        O(1)        O(n)        O(n)        O(1)     
+Linked List                 O(n)        O(n)        O(1)        O(1)        O(1)        O(n)     
+Doubly-Linked List          O(n)        O(n)        O(1)        O(1)        O(1)        O(1)             
+Queue (as Array)            X           X           O(1)        X           O(n)        X
+Queue (as LL or DLL)        X           X           O(1)        X           O(1)        X
+Stack (as Array, LL, or DLL)X           X           O(1)        X           X           O(1)
+Deque (as DLL)              X           X           O(1)        O(1)        O(1)        O(1)     
+
+
+
+Fill in Runtime and Memory:
+
+Data Structure          Get         Add         Delete      Iterate         Memory
+Dictionary (Hash Map)   O(1)        O(1)        O(1)        O(n)            medium
+Set (Hash Map)          O(1)        O(1)        O(1)        O(n)            medium          
+Binary Search Tree      O(log n)    O(n)        O(n)        O(1)            light            
+Tree                    O(n)        O(1)        O(1)        O(1)            light
+
+
+SORTING
+
+1. Describe in words how the Bubble Sort algorithm works.
+
+Bubble Sort repeatedly steps through a list, compares each pair of adjacent items
+and swaps them if they are in the wrong order, by default using the rule: least 
+to greatest. So a Bubble Sort would begin by taking the first two items in a
+list and comparing them. If they are out of order, they're swapped. The algorithm
+moves on to the second and third items in the list and compares them. If they are
+out of order, they're swapped. The pass through the list is repeated until no 
+swaps are needed, which indicates that the list is sorted. The Bubble Sort 
+algorithm gets its name for the way bigger elements "bubble" to the top (or right) 
+of the list.
+
+
+2. Describe in words how the Merge Sort algorithm works.
+
+Merge Sort is a divide and conquer, comparison-based sorting algorithm. Merge 
+Sort divides a given list in half into two seperate lists, then divides
+one of those two lists in half into two seperate lists and so on until there are
+two lists containing only one item each. A list with one item is always sorted.
+
+The algorithm takes these two (already sorted) lists, initializes a new, empty 
+list for the results, compares the first element of each sorted list, and removes 
+whichever item is lower and adds it to the results list. The algorithm continues 
+comparing the first items of each list until a list is empty and appends the 
+remaining items from the other list to results list.
+
+Then Merge Sort goes back (to the top, so to speak) to the other list that was 
+created through division and breaks it down into lists of one item as well.The 
+process described above is repeated recursively until all the numbers have gone 
+through this process.
+
+
+3. Describe in words how the Quick Sort algorithm works.
+
+
+Quicksort is a divide and conquer algorithm and operates on the idea of a partition.
+In other words, there is a ‘pivot’ number, ideally located somewhere in the middle
+of the list, in which all the numbers lower than the pivot are moved to the 
+beginning of the list and all the numbers bigger than the pivot are moved to the 
+right of it. Quicksort then creates and recursively sorts sub-arrays until the
+entire list is sorted.
+
+
+GIT BRANCHING
+
+1. Give an instance when you would use git branching.
+
+If an engineer is working on a feature of a site that is already deployed, the 
+engineer may want to keep the code for the deployed site unchanged and located in
+a separate branch of a repo than the updated code for the new feature. So in one
+repo, there could be a branch with the fully functioning code for the deployed
+site, and in a separate branch, there could be the same code as the deployed site
+plus the new code for the new feature. Once the new feature has been fully 
+tested and all bugs squashed, the two branches could merge or the Head could be
+moved to point to the new feature code.
+
+2. What is a pull request?
+
+A pull request is a feature on Github which lets you tell others about changes 
+you've pushed to a repository on GitHub. Once a pull request is opened, you can 
+discuss and review the potential changes with collaborators and add follow-up 
+commits before the changes are merged into the repository. Pull requests are a
+great mechanism for a developer to notify team members that they have, for example,
+completed a new feature.
+
+
+
+
+
